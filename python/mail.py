@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import smtplib
 
-SMTP_SERVER = 'smtp.chmail.ir'
-SMTP_PORT = 465 #25
-EMAIL_SENDER = 'test.project@chmail.ir'
-EMAIL_PASSWORD = '123qweASD'
+SMTP_SERVER = 'smpt.server.com'
+SMTP_PORT = 465 #or 25 for non ssl
+EMAIL_SENDER = 'sender@email.com'
+EMAIL_PASSWORD = 'sender_password'
 
 
 def send_email(email_addr):
@@ -37,6 +37,3 @@ def send_email(email_addr):
     mail_server.sendmail(sender, recipient, headers + "\r\n\r\n" + body)
     print "sent"
     mail_server.quit()
-
-
-send_email('beheshtraya@gmail.com')
