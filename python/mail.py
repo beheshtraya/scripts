@@ -35,5 +35,5 @@ def send_email(email_addr):
     mail_server.login(sender, EMAIL_PASSWORD)
 
     mail_server.sendmail(sender, recipient, headers + "\r\n\r\n" + body)
-    print "sent"
+    print("sent")
     mail_server.quit()
